@@ -927,7 +927,7 @@ void mg_http_serve_file(struct mg_connection *c, struct mg_http_message *hm,
     mg_printf(c, "HTTP/1.1 304 Not Modified\r\nContent-Length: 0\r\n\r\n");
   } else {
     int n, status = 200;
-    char range[70] = "";
+    char range[160] = "";
     int64_t r1 = 0, r2 = 0, cl = st.st_size;
 
     // Handle Range header
